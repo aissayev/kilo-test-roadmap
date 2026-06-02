@@ -1,0 +1,20 @@
+/*
+ * Cascade-layer ordering so Tailwind v4 and Mantine coexist cleanly:
+ *   theme      → Tailwind design tokens
+ *   tw-base    → Tailwind preflight (reset)
+ *   mantine    → Mantine component styles (override the reset)
+ *   tw-utilities → Tailwind utilities (win over Mantine when both target an element)
+ */
+@layer theme, tw-base, mantine, tw-utilities;
+
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(tw-base);
+@import 'tailwindcss/utilities.css' layer(tw-utilities);
+
+@import '@mantine/core/styles.layer.css';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}

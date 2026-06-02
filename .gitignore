@@ -1,0 +1,39 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# next.js
+/.next/
+/out/
+next-env.d.ts.bak
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# ---------------------------------------------------------------------------
+# Repo-local research / business content — kept OUT of this deploy repo.
+# (Lives here on disk but should never be committed or published to Netlify.)
+# ---------------------------------------------------------------------------
+/.research/
+/kilo-athletes/
+/kilo-domain-knowledge/
+/kilo-v1/
+/kilo-v1-engineers-2026-04.md
+/kilo-v1-research-2026-04-27.md

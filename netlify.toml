@@ -1,4 +1,8 @@
-# Netlify configuration
-# Publishes ONLY the public/ folder — repo content outside it is never served.
+# Netlify configuration — Next.js static export.
+# `next build` with output:'export' emits a static site into `out/`.
 [build]
-  publish = "public"
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "20"
