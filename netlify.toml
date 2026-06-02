@@ -1,0 +1,4 @@
+# Netlify configuration
+# Publishes ONLY the public/ folder — repo content outside it is never served.
+[build]
+  publish = "public"
